@@ -15,7 +15,7 @@ INSTRUCT_CONFIG = {
         "lr": 0.0001,
         "distributed": "ddp",
         "gpu_count": 1,
-        "batch_size": 140,
+        "batch_size": 128,
         "use_lora": False
     },
     "1_2_b": {
@@ -23,7 +23,7 @@ INSTRUCT_CONFIG = {
         "distributed": "ddp",
         "gpu_count": 1,
         "use_lora": False,
-        "batch_size": 100,
+        "batch_size": 64,
     },
     "2_4_b": {
         "lr": 8e-5,
@@ -35,27 +35,27 @@ INSTRUCT_CONFIG = {
         "lr": 6e-5,
         "distributed": "ddp",
         "gpu_count": 2,
-        "batch_size": 40,
+        "batch_size": 32,
     },
     "5_9_b": {
         "lr": 4e-5,
         "distributed": "ddp",
         "gpu_count": 2,
-        "batch_size": 30,
+        "batch_size": 24,
     },
     "9_12_b": {
         "lr": 0.00015,
         "distributed": "ddp",
         "gpu_count": 2,
         "use_lora": True,
-        "batch_size": 32,
+        "batch_size": 24,
     },
     "12_15_b": {
         "lr": 0.0001,
         "distributed": "ddp",
         "gpu_count": 4,
         "use_lora": True,
-        "batch_size": 20,
+        "batch_size": 16,
     },
     "15_40_b": {
         "lr": 8e-5,
@@ -69,7 +69,7 @@ INSTRUCT_CONFIG = {
         "distributed": "ds",
         "gpu_count": 8,
         "use_lora": True,
-        "batch_size": 6,
+        "batch_size": 4,
     }        
 }
 
@@ -102,7 +102,7 @@ def get_instruct_config(param_nums: int) -> dict:
             "lr": 4e-5,
             "distributed": "ds",
             "gpu_count": 8,
-            "batch_size": 6,
+            "batch_size": 4,
             "use_lora": True
         }
 
